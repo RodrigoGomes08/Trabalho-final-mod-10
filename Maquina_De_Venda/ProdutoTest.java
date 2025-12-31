@@ -16,7 +16,6 @@ public class ProdutoTest
         Bebida b1 = new Bebida("Refrigerante Cósmico", 2.99, 10);
         Bebida b2 = new Bebida("Chá Alienígena", 3.99, 1);
         
-        
         System.out.println(s1.toString());
         System.out.println(s2.toString());
         System.out.println(d1.toString());
