@@ -29,8 +29,10 @@ public class Utilizador
         return this.saldo;
     }
     
-    public void carregarSaldo(){
+    public double carregarSaldo(double valorCarregar){
+        this.saldo = saldo + valorCarregar;
         
+        return this.saldo;
     }
     
     public void descontarSaldo(){
