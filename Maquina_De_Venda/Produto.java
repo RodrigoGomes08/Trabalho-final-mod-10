@@ -5,23 +5,23 @@
  * @author (seu nome) 
  * @version (um número da versão ou uma data)
  */
-public class Produto
+public /*abstract*/ class Produto
 {
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
     private String nome;
     private double preco;
-    private int qtdDisponivel;
+    private int qtd;
     private String imagem;
     
     /**
      * Construtor para objetos da classe Produto
      */
-    public Produto(String nome, double preco, int qtdDisponivel)
+    public Produto(String nome, double preco, int qtd)
     {
         // inicializa variáveis de instância
         this.nome = nome;
         this.preco = preco;
-        this.qtdDisponivel = qtdDisponivel;
+        this.qtd = qtd;
     }
     
     public String getNome()
@@ -39,15 +39,18 @@ public class Produto
         return this.preco;
     }
     
-    public int getQtdDisponivel()
+    public int getQtd()
     {
-        return this.qtdDisponivel;
+        return this.qtd;
     }
     
-    public void comprar()
+    public boolean qtdDisponivel()
     {
-        String qtdCompra;
-        
+        if(qtd > 0)
+        {
+            return true;
+        }
+        return false;   
     }
     
     @Override
@@ -56,7 +59,7 @@ public class Produto
         StringBuilder sb = new StringBuilder();
         sb.append("Nome :").append(this.nome).append("\n");
         sb.append("Preço :").append(this.preco).append("\n");
-        sb.append("Quantidde disponivel :").append(this.qtdDisponivel).append("\n");
+        sb.append("Quantidde disponivel :").append(this.qtd).append("\n");
         
         return sb.toString();
     }

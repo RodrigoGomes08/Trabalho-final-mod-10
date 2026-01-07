@@ -8,7 +8,7 @@
 public class Utilizador
 {
     // variáveis de classe
-    static double SALDOINICIAL = 0.00;
+    private static final double SALDO_INICIAL = 0.00;
     
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
     private String nome;
@@ -22,20 +22,38 @@ public class Utilizador
         // inicializa variáveis de instância
         this.nome = nome;
         this.email = email;
-        this.saldo = SALDOINICIAL;
+        this.saldo = SALDO_INICIAL;
     }
     
-    public double getSaldo(){
+    public double getSaldo()
+    {
         return this.saldo;
     }
     
-    public double carregarSaldo(double valorCarregar){
-        this.saldo = saldo + valorCarregar;
-        
-        return this.saldo;
+    public void carregarSaldo(double valorCarregar)
+    {
+        if(valorCarregar > 0)
+        {
+            this.saldo = this.saldo + valorCarregar;
+        }
     }
     
-    public void descontarSaldo(){
-        
+    public void descontarSaldo(double valorDescontar)
+    {
+        if(valorDescontar < this.saldo)
+        {
+            this.saldo = this.saldo - valorDescontar;
+        }
     }
 }
+
+
+
+
+
+
+
+
+
+
+

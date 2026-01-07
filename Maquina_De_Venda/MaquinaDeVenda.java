@@ -1,4 +1,4 @@
-
+import java.util.ArrayList;
 /**
  * Escreva uma descrição da classe MaquinaDeVenda aqui.
  * 
@@ -8,15 +8,18 @@
 public class MaquinaDeVenda
 {
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
-    private int x;
-
+    private Utilizador utilizador;
+    private int id;
+    private String localizacao;
+    
     /**
      * Construtor para objetos da classe MaquinaDeVenda
      */
-    public MaquinaDeVenda()
+    public MaquinaDeVenda(int id, String localizacao)
     {
         // inicializa variáveis de instância
-        x = 0;
+        this.id = id;
+        this.localizacao = localizacao;
     }
 
     /**
@@ -25,9 +28,17 @@ public class MaquinaDeVenda
      * @param  y   um exemplo de um parâmetro de método
      * @return     a soma de x e y 
      */
-    public int sampleMethod(int y)
+    public boolean comprar(int indice)
     {
-        // escreva seu código aqui
-        return x + y;
+        produtos.get[0]
+        /*if(this.utilizador.getSaldo() > produto.getPreco())
+        {
+            if(produto.qtdDisponivel() == true)
+            {
+                this.utilizador.descontarSaldo(produto.getPreco());
+                return true;
+            }
+        }
+        return false;*/
     }
 }
