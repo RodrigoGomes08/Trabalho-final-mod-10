@@ -28,10 +28,10 @@ public class MaquinaDeVenda
      * @param  y   um exemplo de um parâmetro de método
      * @return     a soma de x e y 
      */
+    
     public boolean comprar(int indice)
     {
-        produtos.get[0]
-        /*if(this.utilizador.getSaldo() > produto.getPreco())
+        if(this.utilizador.getSaldo() > produto.getPreco())
         {
             if(produto.qtdDisponivel() == true)
             {
@@ -39,6 +39,6 @@ public class MaquinaDeVenda
                 return true;
             }
         }
-        return false;*/
+        return false;
     }
 }
