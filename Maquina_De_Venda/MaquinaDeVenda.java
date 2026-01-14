@@ -9,16 +9,18 @@ public class MaquinaDeVenda
 {
     // variáveis de instância - substitua o exemplo abaixo pelo seu próprio
     private Utilizador utilizador;
+    private ArrayList<Produto> produtos;
     private int id;
     private String localizacao;
     
     /**
      * Construtor para objetos da classe MaquinaDeVenda
      */
-    public MaquinaDeVenda(int id, String localizacao)
+    public MaquinaDeVenda(int id, ArrayList<Produto> produtos, String localizacao)
     {
         // inicializa variáveis de instância
         this.id = id;
+        this.produtos = produtos;
         this.localizacao = localizacao;
     }
 
@@ -29,16 +31,14 @@ public class MaquinaDeVenda
      * @return     a soma de x e y 
      */
     
-    public boolean comprar(int indice)
+    public void comprar(int i)
     {
-        if(this.utilizador.getSaldo() > produto.getPreco())
-        {
-            if(produto.qtdDisponivel() == true)
-            {
-                this.utilizador.descontarSaldo(produto.getPreco());
-                return true;
-            }
-        }
-        return false;
+        Produto produto = produtos.get(i);
+        
+        int quantidade = produto.getQtd();
+        double preco = produto.getPreco();
+        
+        double saldo = this.utilizador.getSaldo();
     }
 }
+
