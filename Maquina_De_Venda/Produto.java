@@ -44,13 +44,25 @@ public abstract class Produto
         return this.qtd;
     }
     
-    public boolean qtdDisponivel()
+    public void setQtd()
+    {
+        this.qtd = qtd;    
+    }
+    
+    /*public boolean qtdDisponivel()
     {
         if(qtd > 0)
         {
             return true;
         }
         return false;   
+    }
+    */
+   
+    public int diminuirQtd()
+    {
+        this.qtd = qtd - 1;
+        return qtd;
     }
     
     @Override

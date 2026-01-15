@@ -40,7 +40,7 @@ public class Utilizador
     
     public void descontarSaldo(double valorDescontar)
     {
-        if(valorDescontar < this.saldo)
+        if(valorDescontar <= this.saldo)
         {
             this.saldo = this.saldo - valorDescontar;
         }
